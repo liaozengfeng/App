@@ -3,12 +3,9 @@
 namespace App\Http\Controllers\index;
 
 use App\Http\Controllers\Controller;
-use App\Models\AdminModel;
-use App\Models\PermissionModel;
-use App\Models\RelationModel;
+use App\Models\AreaModel;
+use App\Models\GoodsModel;
 use App\Models\AddressModel;
-use App\Models\TrolleyModel;
-use App\Models\ShopModel;
 use Illuminate\Http\Request;
 class IndexController extends Controller
 {
@@ -18,6 +15,7 @@ class IndexController extends Controller
        $data=AreaModel::where('pid',$pid)->get()->toArray();
        echo json_encode($data,1);
    }
+   //收货地址展示
     public function order(Request $request){
         $data=AddressModel::all()->toArray();
         foreach ($data as $k=>$v){
@@ -29,5 +27,27 @@ class IndexController extends Controller
             $data[$k]['district']=$district;
         }
         echo json_encode($data,1);
+    }
+
+    //商品展示
+    public function goodslist(Request $request){
+        $data=GoodsModel::get();
+        echo json_encode($data,1);
+    }
+    //购物车展示
+    public function cardlist(Request $request){
+
+    }
+    
+    public static function cart_recursion($data,$parent_id=0){
+        $arr=[];
+        foreach ($data as $k=>$v) {
+            if ($v->parent_id == $parent_id) {
+                $son=self::info($data,$v->sort_id);
+                $v['son']=$son;
+                $arr[$k]=$v;
+            }
+        }
+        return $arr;
     }
 }

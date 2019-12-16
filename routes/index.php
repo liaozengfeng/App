@@ -13,12 +13,12 @@
 
 
 
-//首页
+//三级联动
 Route::any('/origin/index','index\IndexController@index');
-//详情页
+//收货地址
 Route::any('/order/list','index\IndexController@order');
 
-Route::any('/index/news/news_id','index\NewsController@news_id');
+Route::any('/goods/goodslist','index\IndexController@goodslist');
 //分类 新闻
 Route::any('/index/cart/list','index\CartController@list');
 //今日新闻
