@@ -49,122 +49,58 @@
                     <span class="ng-scope">classify</span>
                 </li>
                 <li>
-                    <a class="J_menuItem" href="/admin/permission/index">
+                    <a class="J_menuItem" href="#">
                         <i class="fa fa-home"></i>
                         <span class="nav-label">Permission</span>
                     </a>
                 </li>
-                    {{--导航栏--}}
+                {{--分类--}}
                     <li>
                         <a href="javascript:;">
                             <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">Navigation</span>
+                            <span class="nav-label">分类</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="/admin/navigation/save">Navigation to add</a>
+                                <a class="J_menuItem" href="/admin/sort/SortAdd">分类添加</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="/admin/navigation/show">The navigation display</a>
-                            </li>
-                        </ul>
-                    </li>
-                    {{--轮播图--}}
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">Carousel</span>
-                            <span class="fa arrow"></span>
-                        </a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="J_menuItem" href="/admin/carousel/save">By adding</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="/admin/carousel/show">By showing</a>
+                                <a class="J_menuItem" href="/admin/sort/SortList">分类展示</a>
                             </li>
                         </ul>
                     </li>
 
-                    {{--分类--}}
+                 {{--品牌--}}
                     <li>
                         <a href="javascript:;">
                             <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">classify</span>
+                            <span class="nav-label">品牌</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="/admin/cart/save">Classification of add</a>
+                                <a class="J_menuItem" href="/admin/brands/BrandAdd">品牌添加</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="/admin/cart/show">Classification display</a>
+                                <a class="J_menuItem" href="/admin/brands/BrandList">品牌展示</a>
                             </li>
                         </ul>
                     </li>
 
-                    {{--管理员--}}
-                    <li>
-                    <a href="javascript:;">
-                        <i class="fa fa fa-bar-chart-o"></i>
-                        <span class="nav-label">Admin</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a class="J_menuItem" href="/admin/index">Administrator display</a>
-                        </li>
-                    </ul>
-                </li>
-
-                {{--新闻--}}
-                <li>
-                    <a href="javascript:;">
-                        <i class="fa fa fa-bar-chart-o"></i>
-                        <span class="nav-label">News</span>
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a class="J_menuItem" href="/admin/news/save">The news added</a>
-                        </li>
-                        <li>
-                            <a class="J_menuItem" href="/admin/news/show">News show</a>
-                        </li>
-                    </ul>
-                </li>
-
-                    {{--友链--}}
+                {{--商品--}}
                     <li>
                         <a href="javascript:;">
                             <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">Links</span>
+                            <span class="nav-label">商品</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="/admin/link/save">Add friends chain</a>
+                                <a class="J_menuItem" href="/admin/goods/GoodsAdd">商品添加</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="/admin/link/show">Friend chain show</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    {{--广告--}}
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">Advertising</span>
-                            <span class="fa arrow"></span>
-                        </a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="J_menuItem" href="/admin/advertising/save">Advertising add</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="/admin/advertising/show">Display advertising</a>
+                                <a class="J_menuItem" href="/admin/goods/GoodsList">商品展示</a>
                             </li>
                         </ul>
                     </li>
