@@ -14,9 +14,10 @@
 
 
 //首页
-Route::any('/index/index','index\HomeController@index');
+Route::any('/origin/index','index\IndexController@index');
 //详情页
-Route::any('/index/news/info','index\NewsController@info');
+Route::any('/order/list','index\IndexController@order');
+
 Route::any('/index/news/news_id','index\NewsController@news_id');
 //分类 新闻
 Route::any('/index/cart/list','index\CartController@list');
