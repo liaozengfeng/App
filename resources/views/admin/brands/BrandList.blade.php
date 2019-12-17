@@ -34,5 +34,5 @@
 	@endforeach
 
 </table>
-
+{{ $res->links() }}
 @endsection

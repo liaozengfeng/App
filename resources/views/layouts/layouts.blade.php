@@ -33,7 +33,7 @@
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="/admin/index">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                     <span class="block m-t-xs" style="font-size:20px;">
                                         <i class="fa fa-area-chart"></i>
@@ -54,6 +54,24 @@
                         <span class="nav-label">Permission</span>
                     </a>
                 </li>
+
+                           {{--轮播图--}}
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">轮播图</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="/admin/gures/GureAdd">轮播图添加</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/admin/gures/GureList">轮播图展示</a>
+                            </li>
+                        </ul>
+                    </li>
+
                 {{--分类--}}
                     <li>
                         <a href="javascript:;">
@@ -104,6 +122,94 @@
                             </li>
                         </ul>
                     </li>
+                        
+                   {{--商品图片--}}
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">商品图片</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="/admin/img/ImgAdd">商品图片添加</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/admin/img/ImgList">商品图片展示</a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                 {{--rbac--}}
+                 {{--角色--}}
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">角色</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="/admin/roles/RoleAdd">角色添加</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/admin/roles/RoleList">角色展示</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    {{--用户角色关联--}}
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">用户角色关联</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href="/admin/relevances/RelevanAdd">用户角色关联添加</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/admin/relevances/RelevanList">用户角色关联展示</a>
+                            </li>
+                        </ul>
+                        </li>
+                        {{--权重--}}
+                        <li>
+                            <a href="javascript:;">
+                                <i class="fa fa fa-bar-chart-o"></i>
+                                <span class="nav-label">权重</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a class="J_menuItem" href="/admin/perms/PermsAdd">权重添加</a>
+                                </li>
+                                <li>
+                                    <a class="J_menuItem" href="/admin/perms/PermsList">权重展示</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                          {{--权重角色管理--}}
+                        <li>
+                            <a href="javascript:;">
+                                <i class="fa fa fa-bar-chart-o"></i>
+                                <span class="nav-label">权重角色管理</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a class="J_menuItem" href="/admin/relevancs/ReleAdd">权重添加</a>
+                                </li>
+                                <li>
+                                    <a class="J_menuItem" href="/admin/relevancs/ReleList">权重展示</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
             </ul>
         </div>
     </nav>
@@ -123,11 +229,11 @@
                     <a class="navbar-brand" href="/index/index">Front desk</a>
                     <ul class="navbar-nav ">
                         @if(empty(session('all')))
-                            <a class="navbar-brand" href="/login/login">Log in</a>
+                            <a class="navbar-brand" href="/login/Logins">Log in</a>
                         @else
                             <li class="nav-item dropdown" style="list-style-type: none;">
                                 <a class="navbar-brand" href="javascript:;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ session('all')['a_name'] }} <span class="caret"></span>
+                                    {{ session('all')['admin_name'] }} <span class="caret"></span>
                                 </a>
                                 <a class="navbar-brand" href="/login/login_out" aria-haspopup="true" aria-expanded="false" v-pre>
                                     logout

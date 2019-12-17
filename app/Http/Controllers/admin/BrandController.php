@@ -9,6 +9,11 @@ use Storage;
 
 class BrandController extends Controller
 {
+
+    public function layouts(){
+        return view('layouts.layouts');
+    }
+
     public function BrandAdd(){
     	return view('admin.brands.BrandAdd');
     }
@@ -32,7 +37,7 @@ class BrandController extends Controller
 
 	public function BrandList(Request $request){
 			$data=$request->all();
-			$res=BrandModel::all();
+			$res=BrandModel::paginate(3);
 			return view('admin.brands.BrandList',['res'=>$res]);
 	}
 

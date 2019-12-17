@@ -36,6 +36,9 @@ class GoodsController extends Controller
 
     public function GoodsList(Request $request){
     	$data=$request->all();
-    	dd($data);
+    	$res=GoodsModel::join('brands','goods.brand_id','=','brands.brand_id')->join('sorts','goods.sort_id','=','sorts.sort_id')->paginate(3);
+    	return view('admin.goods.GoodsList',['res'=>$res]);
+    	// 
+    	
     }
 }

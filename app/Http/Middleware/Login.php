@@ -3,8 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App\Models\JurisdictionModel;
-use App\Models\RelationModel;
+use App\Models\RoleModel;
+use App\Models\permsModel;
 class Login
 {
     /**
@@ -21,18 +21,18 @@ class Login
         }else{
             $url="/".$request->path();
             $info=session("all");
-            $p_id=RelationModel::join("permission","permission.p_id","=","relation.p_id")->where("admin_id",$info['admin_id'])->join("relation_join_jurisdiction","relation_join_jurisdiction.p_id","=","permission.p_id")->get(['j_id'])->toArray();
+            $p_id=RoleModel::join("relevances","roles.roles_id","=","relevances.roles_id")->where("admin_id",$info['admin_id'])->join("relevancs","roles.roles_id","=","relevancs.roles_id")->get(['per_id'])->toArray();
             $j_id=[];
             foreach($p_id as $k=>$v){
-                $j_id[]=$v['j_id'];
+                $j_id[]=$v['per_id'];
             }
-            $urls=JurisdictionModel::whereIn("j_id",$j_id)->get(['j_url'])->toArray();
+            $urls=permsModel::whereIn("per_id",$j_id)->get(['per_url'])->toArray();
             $url_info=[];
             foreach($urls as $v){
-                $url_info[]=$v['j_url'];
+                $url_info[]=$v['per_url'];
             }
             if (!in_array($url,$url_info)){
-                echo '<script>alert("Have no right to access!!!"); location.href="/admin/permission/index"</script>';
+                echo '<script>alert("Have no right to access!!!"); location.href="/layouts/layouts"</script>';
             }else{
                 return $next($request);
 

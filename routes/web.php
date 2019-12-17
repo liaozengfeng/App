@@ -39,8 +39,27 @@ Route::get('/', function () {
 // // });
 
 
+// 登陆注册
+// 注册
+Route::any('/login/Reg','login\AdminController@Reg');
+// 执行注册
+Route::any('/login/Reg_do','login\AdminController@Reg_do');
+// 唯一性
+Route::any('/login/Weiyi','login\AdminController@Weiyi');
+// 登陆
+Route::any('/login/Logins','login\AdminController@Logins');
+//执行登陆
+Route::any('/login/Logins_do','login\AdminController@Logins_do');
+
+
+Route::group(['middleware'=>['Login']],function(){
+// 退出登陆
+ Route::any('/login/login_out','login\AdminController@login_out');
+
 
 //电商后台项目
+//首页
+ Route::any('/layouts/layouts','admin\BrandController@layouts');
 //分类表
 //分类添加
  Route::any('/admin/sort/SortAdd','admin\SortController@SortAdd');
@@ -80,7 +99,67 @@ Route::any('/admin/goods/GoodsDel','admin\GoodsController@GoodsDel');
 Route::any('/admin/goods/GoodsUpdate','admin\GoodsController@GoodsUpdate');
 //商品执行修改
 Route::any('/admin/goods/GoodsUpdate_do','admin\GoodsController@GoodsUpdate_do');
-
-
-
-
+// 轮播图表
+// 轮播图添加
+Route::any('/admin/gures/GureAdd','admin\GureController@GureAdd');
+//轮播图添加
+Route::any('/admin/gures/GureAdd_do','admin\GureController@GureAdd_do');
+//轮播图展示
+Route::any('/admin/gures/GureList','admin\GureController@GureList');
+//轮播图删除
+Route::any('/admin/gures/GureDel','admin\GureController@GureDel');
+// 轮播图修改
+Route::any('/admin/gures/GureUpdate','admin\GureController@GureUpdate');
+// 轮播图执行修改
+Route::any('/admin/gures/GureUpdate_do','admin\GureController@GureUpdate_do');
+// 商品图片表
+//商品图片添加
+Route::any('/admin/img/ImgAdd','admin\ImgController@ImgAdd');
+//商品图片执行添加
+Route::any('/admin/img/ImgAdd_do','admin\ImgController@ImgAdd_do');
+//商品图片展示
+Route::any('/admin/img/ImgList','admin\ImgController@ImgList');
+//商品图片删除
+Route::any('/admin/img/ImgDel','admin\ImgController@ImgDel');
+//商品图片修改
+Route::any('/admin/img/ImgUpdate','admin\ImgController@ImgUpdate');
+//商品图片执行修改
+Route::any('/admin/img/ImgUpdate_do','admin\ImgController@ImgUpdate_do');
+// rbac
+// 角色表
+// 角色添加
+Route::any('/admin/roles/RoleAdd','admin\RoleController@RoleAdd');
+// 角色执行添加
+Route::any('/admin/roles/RoleAdd_do','admin\RoleController@RoleAdd_do');
+// 角色展示
+Route::any('/admin/roles/RoleList','admin\RoleController@RoleList');
+// 角色删除
+Route::any('/admin/roles/RoleDel','admin\RoleController@RoleDel');
+// 用户角色关联表
+// 用户角色关联添加
+Route::any('/admin/relevances/RelevanAdd','admin\RelevancesController@RelevanAdd');
+// 用户角色关联执行添加
+Route::any('/admin/relevances/RelevanAdd_do','admin\RelevancesController@RelevanAdd_do');
+// 用户角色关联展示
+Route::any('/admin/relevances/RelevanList','admin\RelevancesController@RelevanList');
+// 用户角色关联修改
+Route::any('/admin/relevances/RelevanUpdate','admin\RelevancesController@RelevanUpdate');
+// 用户角色关联执行修改
+Route::any('/admin/relevances/RelevanUpdate_do','admin\RelevancesController@RelevanUpdate_do');
+// 权重表
+// 权重添加
+Route::any('/admin/perms/PermsAdd','admin\PermsController@PermsAdd');
+// 权重执行添加
+Route::any('/admin/perms/PermsAdd_do','admin\PermsController@PermsAdd_do');
+// 权重展示
+Route::any('/admin/perms/PermsList','admin\PermsController@PermsList');
+// 权重删除
+Route::any('/admin/perms/PermsDel','admin\PermsController@PermsDel');
+// 权重角色关联表
+// 权重角色关联添加
+Route::any('/admin/relevancs/ReleAdd','admin\RelevancsController@ReleAdd');
+// 权重角色关联执行添加
+Route::any('/admin/relevancs/ReleAdd_do','admin\RelevancsController@ReleAdd_do');
+// 权重角色关联展示
+Route::any('/admin/relevancs/ReleList','admin\RelevancsController@ReleList');
+});
