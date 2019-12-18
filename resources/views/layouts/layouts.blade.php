@@ -128,6 +128,12 @@
                         <a href="javascript:;">
                             <i class="fa fa fa-bar-chart-o"></i>
                             <span class="nav-label">商品图片</span>
+
+                     {{--商品--}}
+                <li>
+                        <a href="javascript:;">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">广告</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
@@ -146,6 +152,19 @@
                         <a href="javascript:;">
                             <i class="fa fa fa-bar-chart-o"></i>
                             <span class="nav-label">角色</span>
+                                <a class="J_menuItem" href="/wides/wides">广告添加</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/wides/wides_line">广告列表</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    {{--广告--}}
+                 <!--    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label">广告</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
@@ -210,6 +229,13 @@
 
 
 
+                                <a class="J_menuItem" href="/admin/advertising/save">广告添加</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="/admin/advertising/show">广告列表</a>
+                            </li>
+                        </ul>
+                    </li> -->
             </ul>
         </div>
     </nav>

@@ -15,7 +15,37 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+        //登录
+        Route::any('/login/login','login\LoginController@login');
+        //注册
+        Route::any('/login/register','login\LoginController@register');
+        //考试
+        Route::any('/exam','admin\ExamController@index');
+        Route::any('/list','admin\ExamController@list');
+        Route::any('/info','admin\ExamController@info');
 
+
+// Route::group(['middleware'=>['Login']],function(){
+        //退出登录
+        Route::any('/login/login_out','login\LoginController@login_out');
+
+        //Admin_index
+		Route::any('/admin/index','admin\AdminController@index');
+		Route::any('/admin/admin/search','admin\AdminController@search');
+		Route::any('/admin/update','admin\AdminController@update');
+		//权限
+		Route::any('/admin/permission/index','admin\PermissionController@index');
+// });
+ // Route::any('/layouts/layouts','layouts\PermissionController@layouts');
+//广告添加
+Route::any('/wides/wides','admin\PermissionController@wides');
+//添加执行
+Route::any('/wides/wides_list','admin\PermissionController@wides_list');
+//广告展示
+Route::any('/wides/wides_line','admin\PermissionController@wides_line');
+//广告删除
+Route::any('/wides/wides_delete','admin\PermissionController@wides_delete');
+//广告修改
 // 登陆注册
 // 注册
 Route::any('/login/Reg','login\AdminController@Reg');
