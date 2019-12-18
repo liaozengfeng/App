@@ -36,4 +36,24 @@ class SortController extends Controller
     	return view('admin.sort.SortList',['res'=>$res]);
     }
 
+     public function SortDel(Request $request){
+      $data=$request->all();
+      $res=SortModel::where(['sort_id'=>$data['sort_id']])->delete();
+      if ($res) {
+        echo 1;
+      }else{
+        echo 2;
+      }
+
+   }
+
+   public function SortUpdate(Request $request){
+      $data=$request->all();
+      $res=SortModel::where(['sort_id'=>$data['sort_id']])->first();
+      $info=SortModel::all();
+      $info=createTree($info);
+      return view('admin.sort.SortUpdate',['res'=>$res],['info'=>$info]);
+
+   }
+
 }

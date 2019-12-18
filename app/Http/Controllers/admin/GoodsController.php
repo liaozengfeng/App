@@ -41,4 +41,45 @@ class GoodsController extends Controller
     	// 
     	
     }
+
+     public function GoodsDel(Request $request){
+        $data=$request->all();
+        $res=GoodsModel::where(['goods_id'=>$data['goods_id']])->delete();
+        if ($res) {
+            echo 1;
+        }else{
+            echo 2;
+        }
+
+   }
+
+   public function GoodsUpdate(Request $request){
+        $data=$request->all();
+        $res=GoodsModel::join('brands','goods.brand_id','=','brands.brand_id')->join('sorts','goods.sort_id','=','sorts.sort_id')->where(['goods_id'=>$data['goods_id']])->first();
+        return view('admin.goods.GoodsUpdate',['res'=>$res]);
+
+   }
+
+   public function GoodsUpdate_do(Request $request){
+        $data=$request->all();
+        $res=GoodsModel::where(['goods_id'=>$data['goods_id']])->update([
+                'goods_name'=>$data['goods_name'],
+                'goods_stock'=>$data['goods_stock'],
+                'goods_desc'=>$data['goods_desc'],
+                'goods_pirce'=>$data['goods_pirce'],
+                'is_up'=>$data['is_up'],
+                'is_sale'=>$data['is_sale'],
+                'is_new'=>$data['is_new'],
+
+            ]);
+        if ($res) {
+            return $resd=['font'=>'修改成功','code'=>1];
+        }else{
+            return $resd=['font'=>'修改失败','code'=>2];
+        }
+        return json_encode($resd);
+
+   }
+
+
 }
