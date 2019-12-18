@@ -17,20 +17,15 @@
 Route::any('/origin/index','index\IndexController@index');
 //收货地址
 Route::any('/order/list','index\IndexController@order');
-
+//商品展示
 Route::any('/goods/goodslist','index\IndexController@goodslist');
-//分类 新闻
-Route::any('/index/cart/list','index\CartController@list');
-//今日新闻
-Route::any('/index/news/list','index\TodayController@list');
-//天气
-Route::any('/index/weather/list','index\WeatherController@list');
-Route::any('/index/weather/getWeather','index\WeatherController@getWeather');
-
-//团队介绍
-Route::any('/index/home','index\DeveloperController@home');
-
-Route::group(['middleware'=>['Login']],function(){
-    Route::any('/index/user/index','index\UserController@index');
-
-});
+//分类展示
+Route::any('/sort/sortlist','index\IndexController@sortlist');
+//商品详情
+Route::any('/goods/goodsinfo','index\IndexController@goodsinfo');
+//首页分类
+Route::any('/sort/sorttop','index\IndexController@sorttop');
+//首页轮播图
+Route::any('/gures/gures','index\IndexController@gures');
+//加入购物车
+Route::any('/car/car','index\IndexController@car');

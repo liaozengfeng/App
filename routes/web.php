@@ -16,29 +16,6 @@ Route::get('/', function () {
 });
 
 
-        //登录
-//         Route::any('/login/login','login\LoginController@login');
-//         //注册
-//         Route::any('/login/register','login\LoginController@register');
-//         //考试
-//         Route::any('/exam','admin\ExamController@index');
-//         Route::any('/list','admin\ExamController@list');
-//         Route::any('/info','admin\ExamController@info');
-
-
-// // Route::group(['middleware'=>['Login']],function(){
-//         //退出登录
-//         Route::any('/login/login_out','login\LoginController@login_out');
-
-//         //Admin_index
-// 		Route::any('/admin/index','admin\AdminController@index');
-// 		Route::any('/admin/admin/search','admin\AdminController@search');
-// 		Route::any('/admin/update','admin\AdminController@update');
-// 		//权限
-// 		Route::any('/admin/permission/index','admin\PermissionController@index');
-// // });
-
-
 // 登陆注册
 // 注册
 Route::any('/login/Reg','login\AdminController@Reg');
@@ -50,6 +27,14 @@ Route::any('/login/Weiyi','login\AdminController@Weiyi');
 Route::any('/login/Logins','login\AdminController@Logins');
 //执行登陆
 Route::any('/login/Logins_do','login\AdminController@Logins_do');
+
+//分类类型
+Route::any('/admin/attr/type','admin\AttrController@type');
+//分类类型展示
+Route::any('/admin/attr/list','admin\AttrController@list');
+//商品属性添加
+Route::any('/admin/goods/attrsave','admin\AttrController@attrsave');
+Route::any('/admin/goods/attrlist','admin\AttrController@attrlist');
 
 
 Route::group(['middleware'=>['Login']],function(){

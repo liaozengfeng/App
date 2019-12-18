@@ -24,12 +24,26 @@
 			@endif
 		</td>
 		<td>
-		<a href="{{url('/admin/sort/SortDel')}}?sort_id={{ $v->sort_id }}" >删除||</a>
-		<a href="{{url('/admin/sort/SortUpdate')}}?sort_id={{ $v->sort_id }}" >修改</a>
+		<a href="{{url('/admin/sort/SortDel')}}?sort_id={{ $v->sort_id }}" >删除</a>||
+		<a href="{{url('/admin/sort/SortUpdate')}}?sort_id={{ $v->sort_id }}" >修改</a>||
+		<a href="javascript:;" class="cli" sort_id="{{ $v->sort_id }}">类型</a>
+		<a href="javascript:;" class="list" sort_id="{{ $v->sort_id }}">查看类型</a>
 		</td>
    </tr>
 
 	@endforeach
 
 </table>
+<script>
+	$(function () {
+		$(document).on("click",".cli",function () {
+			var sort_id=$(this).attr('sort_id');
+			location.href='/admin/attr/type?sort_id='+sort_id;
+        })
+        $(document).on("click",".list",function () {
+            var sort_id=$(this).attr('sort_id');
+            location.href='/admin/attr/list?sort_id='+sort_id;
+        })
+    })
+</script>
 @endsection

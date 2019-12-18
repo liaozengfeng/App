@@ -12,7 +12,6 @@
 		<td>商品分类</td>
 		<td>商品库存</td>
 		<td>商品图片</td>
-		<td>商品描述</td>
 		<td>商品价格</td>
 		<td>是否上架</td>
 		<td>是否热销</td>
@@ -29,7 +28,6 @@
 		<td>{{ $v->sort_name }}</td>
 		<td>{{ $v->goods_stock }}</td>
 		<td><img src="{{ '/storage/'.$v->goods_img }}" style="max-width: 100px;"></td>
-		<td>{!! $v->goods_desc !!}</td>
 		<td>{{ $v->goods_pirce }}</td>
 		<td>
 			@if($v->is_up==1)
@@ -57,8 +55,10 @@
 
 
 		<td>
-		<a href="{{url('/admin/goods/GoodsDel')}}?goods_id={{ $v->goods_id }}" >删除||</a>
-		<a href="{{url('/admin/goods/GoodsUpdate')}}?goods_id={{ $v->goods_id }}" >修改</a>
+		<a href="{{url('/admin/goods/GoodsDel')}}?goods_id={{ $v->goods_id }}" >删除</a>||
+		<a href="{{url('/admin/goods/GoodsUpdate')}}?goods_id={{ $v->goods_id }}" >修改</a>||
+		<a href="javascript:;" class="save" sort_id="{{ $v->sort_id }}" goods_id="{{ $v->goods_id }}">属性添加</a>
+		<a href="javascript:;" class="attrlist" goods_id="{{ $v->goods_id }}">属性查看</a>
 		</td>
    </tr>
 
@@ -66,4 +66,17 @@
 
 </table>
 {{ $res->links() }}
+<script>
+	$(function () {
+		$(document).on("click",".save",function () {
+		    var sort_id=$(this).attr("sort_id");
+		    var goods_id=$(this).attr("goods_id");
+			location.href='/admin/goods/attrsave?goods_id='+goods_id+"&sort_id="+sort_id;
+        })
+        $(document).on("click",".attrlist",function () {
+            var goods_id=$(this).attr("goods_id");
+            location.href='/admin/goods/attrlist?goods_id='+goods_id;
+        })
+    })
+</script>
 @endsection

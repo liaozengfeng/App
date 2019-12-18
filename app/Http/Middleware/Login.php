@@ -17,7 +17,7 @@ class Login
     public function handle($request, Closure $next)
     {
         if (empty(session("all"))){
-            echo '<script>alert("Please login first!!!"); location.href="/login/login"</script>';
+            echo '<script>alert("Please login first!!!"); location.href="/layouts/layouts"</script>';
         }else{
             $url="/".$request->path();
             $info=session("all");
