@@ -55,16 +55,40 @@
 
 
 		<td>
+<<<<<<< Updated upstream
 		<a href="{{url('/admin/goods/GoodsDel')}}?goods_id={{ $v->goods_id }}" >删除</a>||
 		<a href="{{url('/admin/goods/GoodsUpdate')}}?goods_id={{ $v->goods_id }}" >修改</a>||
 		<a href="javascript:;" class="save" sort_id="{{ $v->sort_id }}" goods_id="{{ $v->goods_id }}">属性添加</a>
 		<a href="javascript:;" class="attrlist" goods_id="{{ $v->goods_id }}">属性查看</a>
+=======
+		<a href="{{url('/admin/goods/GoodsDel')}}?goods_id={{ $v->goods_id }}" id="del" >删除||</a>
+		<a href="{{url('/admin/goods/GoodsUpdate')}}?goods_id={{ $v->goods_id }}" >修改</a>
+>>>>>>> Stashed changes
 		</td>
    </tr>
 
 	@endforeach
 
 </table>
+<script>
+	$(document).on('click','#del',function(){
+		event.preventDefault();
+		var url=$(this).attr('href');
+		$.ajax({
+			url:url,
+			success:function(res){
+				if (res==1) {
+					alert("删除成功");
+				}else{
+					alert("删除失败");
+				}
+			}
+		});
+
+		$(this).parent().parent().remove();
+	})
+
+</script>
 {{ $res->links() }}
 <script>
 	$(function () {

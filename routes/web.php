@@ -54,10 +54,6 @@ Route::any('/admin/sort/SortAdd_do','admin\SortController@SortAdd_do');
 Route::any('/admin/sort/SortList','admin\SortController@SortList');
 //分类删除
 Route::any('/admin/sort/SortDel','admin\SortController@SortDel');
-//分类修改
-Route::any('/admin/sort/SortUpdate','admin\SortController@SortUpdate');
-//分类执行修改
-Route::any('/admin/sort/SortUpdate_do','admin\SortController@SortUpdate_do');
 //品牌表
 //品牌添加
 Route::any('/admin/brands/BrandAdd','admin\BrandController@BrandAdd');
@@ -93,10 +89,6 @@ Route::any('/admin/gures/GureAdd_do','admin\GureController@GureAdd_do');
 Route::any('/admin/gures/GureList','admin\GureController@GureList');
 //轮播图删除
 Route::any('/admin/gures/GureDel','admin\GureController@GureDel');
-// 轮播图修改
-Route::any('/admin/gures/GureUpdate','admin\GureController@GureUpdate');
-// 轮播图执行修改
-Route::any('/admin/gures/GureUpdate_do','admin\GureController@GureUpdate_do');
 // 商品图片表
 //商品图片添加
 Route::any('/admin/img/ImgAdd','admin\ImgController@ImgAdd');
@@ -106,10 +98,6 @@ Route::any('/admin/img/ImgAdd_do','admin\ImgController@ImgAdd_do');
 Route::any('/admin/img/ImgList','admin\ImgController@ImgList');
 //商品图片删除
 Route::any('/admin/img/ImgDel','admin\ImgController@ImgDel');
-//商品图片修改
-Route::any('/admin/img/ImgUpdate','admin\ImgController@ImgUpdate');
-//商品图片执行修改
-Route::any('/admin/img/ImgUpdate_do','admin\ImgController@ImgUpdate_do');
 // rbac
 // 角色表
 // 角色添加

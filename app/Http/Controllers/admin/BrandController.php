@@ -41,4 +41,37 @@ class BrandController extends Controller
 			return view('admin.brands.BrandList',['res'=>$res]);
 	}
 
+     public function BrandDel(Request $request){
+        $data=$request->all();
+        $res=BrandModel::where(['brand_id'=>$data['brand_id']])->delete();
+        if ($res) {
+            echo 1;
+        }else{
+            echo 2;
+        }
+
+   }
+
+   public function brandUpdate(Request $request){
+        $data=$request->all();
+        $info=BrandModel::where(['brand_id'=>$data['brand_id']])->first();
+        return view("admin.brands.brandUpdate",['info'=>$info]);
+   }
+
+   public function brandUpdate_do(Request $request){
+       $data=$request->all();
+        $res=BrandModel::where(['brand_id'=>$data['brand_id']])->update([
+                'brand_name'=>$data['brand_name'],
+                'brand_url'=>$data['brand_url'],
+                'is_show'=>$data['is_show'],
+            ]);
+            if ($res) {
+                    return $resd=['font'=>'修改成功','code'=>1];
+            }else{
+                    return $resd=['font'=>'修改失败','code'=>2];
+             }
+            return json_encode($resd);
+
+   }
+
 }

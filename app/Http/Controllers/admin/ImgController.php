@@ -36,4 +36,15 @@ class ImgController extends Controller
     	$res=ImgModel::join('goods','img.goods_id','=','goods.goods_id')->paginate(3);
     	return view('admin.img.ImgList',['res'=>$res]);
     }
+
+     public function ImgDel(Request $request){
+      $data=$request->all();
+      $res=ImgModel::where(['img_id'=>$data['img_id']])->delete();
+      if ($res) {
+        echo 1;
+      }else{
+        echo 2;
+      }
+
+   }
 }
