@@ -312,7 +312,7 @@ class IndexController extends Controller
 	public function collist(Request $request)
 	{
 		$add =  $request->input('user_id');
-		$data = CollectModel::join('goods','goods.goods_id','=','collection.goods_id')->where('user_id',$add)->get();
+		$data = CollectModel::join('goods','goods.goods_id','=','collect.goods_id')->where('user_id',$add)->get();
 		echo json_encode($data,1);
 	}
 }
