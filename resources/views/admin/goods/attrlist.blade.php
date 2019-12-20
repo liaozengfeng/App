@@ -6,16 +6,16 @@
 
 <table class="table table-bordered">
    <tr>
-		<td>属性名</td>
+		<td>商品名</td>
 		<td>属性值</td>
+		<td>属性名</td>
    </tr>
 	@foreach($attrinfo as $k=>$v)
-		@foreach($v['attr_val'] as $ke=>$va)
-			<tr>
-				<td>{{ $attrinfo[0]['attr'][$k]['attr_name'] }}</td>
-				<td></td>
-			</tr>
-		@endforeach
+		<tr>
+			<td>{{$v['goods_name'] }}</td>
+			<td>{{$v['attr_val'] }}</td>
+			<td>{{$v['attr_name'] }}</td>
+		</tr>
 	@endforeach
 
 </table>

@@ -64,6 +64,7 @@ Route::any('/admin/attr/type','admin\AttrController@type');
 Route::any('/admin/attr/list','admin\AttrController@list');
 //商品属性添加
 Route::any('/admin/goods/attrsave','admin\AttrController@attrsave');
+//商品属性展示
 Route::any('/admin/goods/attrlist','admin\AttrController@attrlist');
 
 

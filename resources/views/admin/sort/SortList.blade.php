@@ -24,14 +24,11 @@
 			@endif
 		</td>
 		<td>
-<<<<<<< Updated upstream
 		<a href="{{url('/admin/sort/SortDel')}}?sort_id={{ $v->sort_id }}" >删除</a>||
 		<a href="{{url('/admin/sort/SortUpdate')}}?sort_id={{ $v->sort_id }}" >修改</a>||
 		<a href="javascript:;" class="cli" sort_id="{{ $v->sort_id }}">类型</a>
 		<a href="javascript:;" class="list" sort_id="{{ $v->sort_id }}">查看类型</a>
-=======
 		<a href="{{url('/admin/sort/SortDel')}}?sort_id={{ $v->sort_id }}" id="del">删除</a>
->>>>>>> Stashed changes
 		</td>
    </tr>
 
@@ -39,7 +36,6 @@
 
 </table>
 <script>
-<<<<<<< Updated upstream
 	$(function () {
 		$(document).on("click",".cli",function () {
 			var sort_id=$(this).attr('sort_id');
@@ -50,7 +46,6 @@
             location.href='/admin/attr/list?sort_id='+sort_id;
         })
     })
-=======
 	$(document).on('click','#del',function(){
 		event.preventDefault();
 		var url=$(this).attr('href');
@@ -67,7 +62,5 @@
 
 		$(this).parent().parent().remove();
 	})
-
->>>>>>> Stashed changes
 </script>
 @endsection

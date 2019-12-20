@@ -56,12 +56,9 @@ class AttrController extends Controller
 
     public function attrlist(Request $request){
         $goods_id = $request->input("goods_id");
-        $attrinfo=AttrjsongoodsModel::where("goods_id",$goods_id)->get()->toArray();
-        foreach ($attrinfo as $k=>$v){
-            $attrinfo[$k]['attr_val']=AttrvalModel::where("attr_val_id",$v['attr_val_id'])->get()->toArray();
-            $attrinfo[$k]['attr']=AttrModel::where("attr_id",$v['attr_id'])->get(['attr_name'])->toArray();
-        }
-        dd($attrinfo);
+        $attrinfo=AttrjsongoodsModel::join('attr',"attr.attr_id","=","attr_join_goods.attr_id")->join('attr_val',"attr_val.attr_val_id","=","attr_join_goods.attr_val_id")->join('goods',"goods.goods_id","=","attr_join_goods.goods_id")->where("attr_join_goods.goods_id",$goods_id)->get(['goods.goods_name','goods.goods_id','attr.attr_name','attr_val.attr_val'])->toArray();
         return view('admin/goods/attrlist',['attrinfo'=>$attrinfo]);
     }
+
+
 }

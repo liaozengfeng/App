@@ -55,15 +55,12 @@
 
 
 		<td>
-<<<<<<< Updated upstream
 		<a href="{{url('/admin/goods/GoodsDel')}}?goods_id={{ $v->goods_id }}" >删除</a>||
 		<a href="{{url('/admin/goods/GoodsUpdate')}}?goods_id={{ $v->goods_id }}" >修改</a>||
 		<a href="javascript:;" class="save" sort_id="{{ $v->sort_id }}" goods_id="{{ $v->goods_id }}">属性添加</a>
 		<a href="javascript:;" class="attrlist" goods_id="{{ $v->goods_id }}">属性查看</a>
-=======
 		<a href="{{url('/admin/goods/GoodsDel')}}?goods_id={{ $v->goods_id }}" id="del" >删除||</a>
 		<a href="{{url('/admin/goods/GoodsUpdate')}}?goods_id={{ $v->goods_id }}" >修改</a>
->>>>>>> Stashed changes
 		</td>
    </tr>
 

@@ -35,7 +35,7 @@
                 if (attr_name=='颜色'){
                     str+="    <label for=\"inputPassword\" class=\"col-sm-2 control-label\">颜色</label>\n" +
                         "    <div class=\"col-sm-10\">\n" +
-                        "      <input type=\"text\" class=\"form-control\" id=\"inputPassword\">\n" +
+                        "      <input type=\"text\" id=\"inputPassword\">\n" +
                         "    </div>\n";
                 }else if (attr_name=='尺寸') {
                     str+="    <label for=\"inputPassword\" class=\"col-sm-2 control-label\">尺寸</label>\n" +
