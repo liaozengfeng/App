@@ -276,9 +276,9 @@ class IndexController extends Controller
         $order_info=OrderinfoModel::where('user_id',$request->input('user_id'))->get(['order_id','order_sn','order_status','money'])->toArray();
         foreach ($order_info as $k=>$v){
             $order_shop=OrdershopModel::where('order_id',$v['order_id'])->get(['goods_id','goods_num'])->toArray();
-            foreach ($order_shop as $k=>$v){
-                $shop=GoodsModel::where('goods_id',$v['goods_id'])->first(['goods_img','goods_pirce','goods_name'])->toArray();
-                $shop['goods_num']=$v['goods_num'];
+            foreach ($order_shop as $ke=>$va){
+                $shop=GoodsModel::where('goods_id',$va['goods_id'])->first(['goods_img','goods_pirce','goods_name'])->toArray();
+                $shop['goods_num']=$va['goods_num'];
                 $order_info[$k]['order_shop'][]=$shop;
             }
         }
