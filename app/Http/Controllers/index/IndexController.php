@@ -307,4 +307,12 @@ class IndexController extends Controller
        $data=UserModel::where('user_id',$request->input('user_id'))->first(['user_name'])->toArray();
         return json_encode($data,1);
     }
+
+	//收藏列表
+	public function collist(Request $request)
+	{
+		$add =  $request->input('user_id');
+		$data = CollectModel::join('goods','goods.goods_id','=','collection.goods_id')->where('user_id',$add)->get();
+		echo json_encode($data,1);
+	}
 }
