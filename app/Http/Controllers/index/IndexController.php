@@ -210,14 +210,13 @@ class IndexController extends Controller
         $shop_info=[];
         $money=0;
         foreach($info as $k=>$v){
-           $money=$v['goods_num']*$v['goods_pirce'];
+           $money+=$v['goods_num']*$v['goods_pirce'];
            $shopinfo['goods_id']=$v['goods_id'];
            $shopinfo['goods_num']=$v['goods_num'];
            $shopinfo['attr_val_id']=$v['attr_val_id'];
            $shopinfo['goods_price']=$v['goods_pirce'];
            $shop_info[]=$shopinfo;
         }
-        echo $money;return;
         $data['money']=$money;
         $order_id=\DB::table('order_info')->insertGetId($data);
         foreach($shop_info as $k=>$v){
