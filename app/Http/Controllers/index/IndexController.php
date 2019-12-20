@@ -217,6 +217,7 @@ class IndexController extends Controller
            $shopinfo['goods_price']=$v['goods_pirce'];
            $shop_info[]=$shopinfo;
         }
+        echo $money;return;
         $data['money']=$money;
         $order_id=\DB::table('order_info')->insertGetId($data);
         foreach($shop_info as $k=>$v){
