@@ -36,4 +36,16 @@ class GureController extends Controller
     	$res=GureModel::paginate(3);
     	return view('admin.gures.GuresList',['res'=>$res]);
     }
+
+
+     public function GureDel(Request $request){
+        $data=$request->all();
+        $res=GureModel::where(['gure_id'=>$data['gure_id']])->delete();
+        if ($res) {
+            echo 1;
+        }else{
+            echo 2;
+        }
+
+   }
 }

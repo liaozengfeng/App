@@ -15,28 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-        //登录
-//         Route::any('/login/login','login\LoginController@login');
-//         //注册
-//         Route::any('/login/register','login\LoginController@register');
-//         //考试
-//         Route::any('/exam','admin\ExamController@index');
-//         Route::any('/list','admin\ExamController@list');
-//         Route::any('/info','admin\ExamController@info');
-
-
-// // Route::group(['middleware'=>['Login']],function(){
-//         //退出登录
-//         Route::any('/login/login_out','login\LoginController@login_out');
-
-//         //Admin_index
-// 		Route::any('/admin/index','admin\AdminController@index');
-// 		Route::any('/admin/admin/search','admin\AdminController@search');
-// 		Route::any('/admin/update','admin\AdminController@update');
-// 		//权限
-// 		Route::any('/admin/permission/index','admin\PermissionController@index');
-// // });
+//分类类型
+Route::any('/admin/attr/type','admin\AttrController@type');
+//分类类型展示
+Route::any('/admin/attr/list','admin\AttrController@list');
+//商品属性添加
+Route::any('/admin/goods/attrsave','admin\AttrController@attrsave');
+//商品属性展示
+Route::any('/admin/goods/attrlist','admin\AttrController@attrlist');
+// 广告添加
+Route::any('/admin/wides/wides','admin\PermissionController@wides');
+// 广告执行添加
+Route::any('/admin/wides/wides_list','admin\PermissionController@wides_list');
+// 广告展示
+Route::any('/admin/wides/wides_line','admin\PermissionController@wides_line');
+// 广告删除
+Route::any('/admin/wides/wides_delete','admin\PermissionController@wides_delete');
 
 
 // 登陆注册
@@ -50,6 +44,7 @@ Route::any('/login/Weiyi','login\AdminController@Weiyi');
 Route::any('/login/Logins','login\AdminController@Logins');
 //执行登陆
 Route::any('/login/Logins_do','login\AdminController@Logins_do');
+
 
 
 Route::group(['middleware'=>['Login']],function(){
@@ -69,10 +64,8 @@ Route::any('/admin/sort/SortAdd_do','admin\SortController@SortAdd_do');
 Route::any('/admin/sort/SortList','admin\SortController@SortList');
 //分类删除
 Route::any('/admin/sort/SortDel','admin\SortController@SortDel');
-//分类修改
-Route::any('/admin/sort/SortUpdate','admin\SortController@SortUpdate');
-//分类执行修改
-Route::any('/admin/sort/SortUpdate_do','admin\SortController@SortUpdate_do');
+//分类既点既改
+Route::any('/admin/sort/SortThat','admin\SortController@SortThat');
 //品牌表
 //品牌添加
 Route::any('/admin/brands/BrandAdd','admin\BrandController@BrandAdd');
@@ -86,6 +79,8 @@ Route::any('/admin/brands/BrandDel','admin\BrandController@BrandDel');
 Route::any('/admin/brands/BrandUpdate','admin\BrandController@BrandUpdate');
 //品牌执行修改
 Route::any('/admin/brands/BrandUpdate_do','admin\BrandController@BrandUpdate_do');
+//品牌既点既改
+Route::any('/admin/brands/BrandThat','admin\BrandController@BrandThat');
 // 商品表
 //商品添加
 Route::any('/admin/goods/GoodsAdd','admin\GoodsController@GoodsAdd');
@@ -99,6 +94,8 @@ Route::any('/admin/goods/GoodsDel','admin\GoodsController@GoodsDel');
 Route::any('/admin/goods/GoodsUpdate','admin\GoodsController@GoodsUpdate');
 //商品执行修改
 Route::any('/admin/goods/GoodsUpdate_do','admin\GoodsController@GoodsUpdate_do');
+//商品既点既改
+Route::any('/admin/goods/GoodsThat','admin\GoodsController@GoodsThat');
 // 轮播图表
 // 轮播图添加
 Route::any('/admin/gures/GureAdd','admin\GureController@GureAdd');
@@ -108,10 +105,12 @@ Route::any('/admin/gures/GureAdd_do','admin\GureController@GureAdd_do');
 Route::any('/admin/gures/GureList','admin\GureController@GureList');
 //轮播图删除
 Route::any('/admin/gures/GureDel','admin\GureController@GureDel');
+
 // 轮播图修改
 Route::any('/admin/gures/GureUpdate','admin\GureController@GureUpdate');
 // 轮播图执行修改
 Route::any('/admin/gures/GureUpdate_do','admin\GureController@GureUpdate_do');
+
 // 商品图片表
 //商品图片添加
 Route::any('/admin/img/ImgAdd','admin\ImgController@ImgAdd');
@@ -121,10 +120,12 @@ Route::any('/admin/img/ImgAdd_do','admin\ImgController@ImgAdd_do');
 Route::any('/admin/img/ImgList','admin\ImgController@ImgList');
 //商品图片删除
 Route::any('/admin/img/ImgDel','admin\ImgController@ImgDel');
+
 //商品图片修改
 Route::any('/admin/img/ImgUpdate','admin\ImgController@ImgUpdate');
 //商品图片执行修改
 Route::any('/admin/img/ImgUpdate_do','admin\ImgController@ImgUpdate_do');
+
 // rbac
 // 角色表
 // 角色添加
