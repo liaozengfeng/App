@@ -49,7 +49,7 @@
                     <span class="ng-scope">classify</span>
                 </li>
                 <li>
-                    <a class="J_menuItem" href="#">
+                    <a class="J_menuItem" href="/admin/roles/RoleList">
                         <i class="fa fa-home"></i>
                         <span class="nav-label">Permission</span>
                     </a>
@@ -124,13 +124,26 @@
                     </li>
                         
                    {{--商品图片--}}
-                    <li>
+				    <li>
                         <a href="javascript:;">
                             <i class="fa fa fa-bar-chart-o"></i>
                             <span class="nav-label">商品图片</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                 <a class="J_menuItem" href="/admin/img/ImgAdd">商品图片添加</a>
+                            </li>
+                            <li>
+                               <a class="J_menuItem" href="/admin/img/ImgList">商品图片展示</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                     {{--商品--}}
-                <li>
+    
+                 {{--rbac--}}
+                 {{--角色--}}
+				 <li>
                         <a href="javascript:;">
                             <i class="fa fa fa-bar-chart-o"></i>
                             <span class="nav-label">广告</span>
@@ -138,33 +151,21 @@
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="/admin/img/ImgAdd">商品图片添加</a>
+                                 <a class="J_menuItem" href="/wides/wides">广告添加</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="/admin/img/ImgList">商品图片展示</a>
+                               <a class="J_menuItem" href="/wides/wides_line">广告列表</a>
                             </li>
                         </ul>
                     </li>
-    
-                 {{--rbac--}}
-                 {{--角色--}}
-                    <li>
+					
+                    
+
+                    {{--广告--}}
+                 <li>
                         <a href="javascript:;">
                             <i class="fa fa fa-bar-chart-o"></i>
                             <span class="nav-label">角色</span>
-                                <a class="J_menuItem" href="/wides/wides">广告添加</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="/wides/wides_line">广告列表</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    {{--广告--}}
-                 <!--    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">广告</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
@@ -227,15 +228,6 @@
                             </ul>
                         </li>
 
-
-
-                                <a class="J_menuItem" href="/admin/advertising/save">广告添加</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="/admin/advertising/show">广告列表</a>
-                            </li>
-                        </ul>
-                    </li> -->
             </ul>
         </div>
     </nav>
