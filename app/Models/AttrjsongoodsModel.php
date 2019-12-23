@@ -10,7 +10,7 @@ class AttrjsongoodsModel extends Model
     //主键
     public $incrementing = false;
     //表名
-    protected $table = 'attr_joIn_goods';
+    protected $table = 'attr_join_goods';
     //任何东西都可添加
     protected $guarded = [];
     //是否开启自动时间戳

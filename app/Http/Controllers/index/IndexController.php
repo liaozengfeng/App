@@ -44,11 +44,10 @@ class IndexController extends Controller
 
     //商品展示
     public function goodslist(Request $request){
-        $where=empty($request->input("sort_id"))?"":'sort_id = '.$request->input("sort_id");
-        if (empty($where)){
+        if (empty($request->input('sort_id'))){
             $data=GoodsModel::get(['goods_id','goods_name','goods_img','goods_pirce']);
         }else{
-            $data=GoodsModel::whereRaw($where)->get(['goods_id','goods_name','goods_img','goods_pirce']);
+            $data=GoodsModel::where("sort_id",$request->input('sort_id'))->get(['goods_id','goods_name','goods_img','goods_pirce']);
         }
         echo json_encode($data,1);
     }
@@ -193,7 +192,7 @@ class IndexController extends Controller
        }
    }
     public function goodsorder(Request $request){
-        $data=GoodsModel::orderBy($request->input("order"),'desc')->get()->toArray();
+       $data = GoodsModel::orderBy($request->input("order"), 'desc')->get()->toArray();
         echo json_encode($data,1);
     }
 
@@ -328,4 +327,5 @@ class IndexController extends Controller
         }
 	    echo json_encode($arr,1);
 	}
+	
 }

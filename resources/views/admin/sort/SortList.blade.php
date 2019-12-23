@@ -15,7 +15,7 @@
 
 	 <tr>
 		<td>{{ $v->sort_id }}</td>
-		<td>{{str_repeat("==",$v->level).$v->sort_name }}</td>
+		<td>{!!str_repeat("&nbsp;",$v->level*5).$v->sort_name !!}</td>
 		<td>
 			@if($v->is_show==1)
 			是
