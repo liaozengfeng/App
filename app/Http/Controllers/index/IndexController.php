@@ -248,7 +248,7 @@ class IndexController extends Controller
 
     public function addresssave(Request $request){
        $data=$request->all();
-       $res=AddressModel::where('user_id',$data['user_id'])->update(['is_checked'=>1]);
+       $res=AddressModel::where('user_id',$data['user_id'])->update(['is_checked'=>2]);
        if ($res>=0){
            $res=AddressModel::create($data);
            if ($res){
@@ -314,5 +314,18 @@ class IndexController extends Controller
 		$add =  $request->input('user_id');
 		$data = CollectModel::join('goods','goods.goods_id','=','collect.goods_id')->where('user_id',$add)->get();
 		echo json_encode($data,1);
+	}
+	
+	//收货地址默认修改
+	public function address_checked(Request $request){
+	    $data=$request->all();
+        AddressModel::where('user_id',$data['user_id'])->update(['is_checked'=>2]);
+        $res=AddressModel::where('address_id',$data['address_id'])->update($data);
+        if ($res){
+            $arr=['res'=>1];
+        }else{
+            $arr=['res'=>2];
+        }
+	    echo json_encode($arr,1);
 	}
 }

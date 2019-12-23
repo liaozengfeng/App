@@ -55,6 +55,8 @@ Route::any('/order/order_list','index\IndexController@order_list');
 Route::any('/address/addresssave','index\IndexController@addresssave');
 //收货地址删除
 Route::any('/address/addressdel','index\IndexController@addressdel');
+//收货地址修改默认
+Route::any('/address/address_checked','index\IndexController@address_checked');
 //收货地址订单页面展示
 Route::any('/address/addresschecked','index\IndexController@addresschecked');
 
