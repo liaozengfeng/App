@@ -64,3 +64,7 @@ Route::any('/address/addresschecked','index\IndexController@addresschecked');
 Route::any('/collect/collect_save','index\IndexController@collect_save');
 //商品展示
 Route::any('/collect/collist','index\IndexController@collist');
+
+
+//商品搜索
+Route::any('/server/server','index\IndexController@server');
