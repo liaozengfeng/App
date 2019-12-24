@@ -321,7 +321,7 @@ class IndexController extends Controller
     public function browse(Request $request)
     {
         $add =  $request->input('user_id');
-        $data = BrowseModel::join('goods','goods.goods_id','=','collect.goods_id')->where('user_id',$add)->get();
+        $data = BrowseModel::join('goods','goods.goods_id','=','browse.goods_id')->where('user_id',$add)->get();
         echo json_encode($data,1);
     }
 	
