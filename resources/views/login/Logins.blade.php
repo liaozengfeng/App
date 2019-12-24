@@ -28,26 +28,26 @@ $(function(){
 /*登录信息验证*/
 $("#sec_username_hide").focus(function(){
  var username = $(this).val();
- if(username=='主人~请输入账号哦~'){
+ if(username=='~请输入账号哦~'){
  $(this).val('');
  }
 });
 $("#sec_username_hide").focusout(function(){
  var username = $(this).val();
  if(username==''){
- $(this).val('主人~请输入账号哦~');
+ $(this).val('~请输入账号哦~');
  }
 });
 $("#sec_password_hide").focus(function(){
  var username = $(this).val();
- if(username=='主人~请输入密码哦~'){
+ if(username=='~请输入密码哦~'){
  $(this).val('');
  }
 });
 $("#sec_password_hide").focusout(function(){
  var username = $(this).val();
  if(username==''){
- $(this).val('主人~输入密码哦~');
+ $(this).val('~输入密码哦~');
  }
 });
 
@@ -62,7 +62,7 @@ $("#sec_password_hide").focusout(function(){
 <body>
 <div id="tab">
   <ul class="tab_menu">
-    <li class="selected">主人~求摸摸</li>
+    <li class="selected">点击~登录</li>
 
   </ul>
   <div class="tab_box">

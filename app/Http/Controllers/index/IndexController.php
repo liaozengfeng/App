@@ -80,10 +80,11 @@ class IndexController extends Controller
 
     //商品详情
     public function goodsinfo(Request $request){
-        $data=GoodsModel::where('goods_id',$request->input("goods_id"))->first(['goods_id',"goods_img",'goods_desc','goods_pirce'])->toArray();
+        $data=GoodsModel::where('goods_id',$request->input("goods_id"))->first(['goods_id',"goods_img",'goods_desc','goods_pirce','hist'])->toArray();
         $data['goods_imgs']=ImgModel::where('goods_id',$data['goods_id'])->get(['goodss_img'])->toArray();
         $browse=["goods_id"=>$request->input("goods_id"),'user_id'=>$request->input('user_id'),"br_time"=>time()];
         $res=BrowseModel::create($browse);
+        GoodsModel::where('goods_id',$data['goods_id'])->update(['hist'=>$data['hist']+1]);
         $info=AttrjsongoodsModel::where('goods_id',$request->input("goods_id"))->get()->toArray();
         $attr_id=[];
         $attr_val_id=[];

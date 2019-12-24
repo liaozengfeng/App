@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="f8b445a4-6c13-44d4-9d1e-3b18b5e609db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/index/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/index/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/sort/SortList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sort/SortList.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.php" afterDir="false" />
     </list>
+=======
+    <list default="true" id="f8b445a4-6c13-44d4-9d1e-3b18b5e609db" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +95,7 @@
     <session id="-390131652">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="1" />
@@ -139,6 +143,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="487">
@@ -146,6 +151,12 @@
               <folding>
                 <element signature="e#46#82#0#PHP" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/sort/SortList.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="35" selection-end-line="35" selection-end-column="11" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -600,11 +611,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="158768000" />
+=======
+    <option name="totallyTimeSpent" value="120048000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.32841823" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -651,12 +665,21 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/TodayController.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/DeveloperController.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/CartController.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/CarouselController.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/CartController.php" />
     <entry file="file://$PROJECT_DIR$/routes/index.php">
+=======
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/PermissionController.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/index/today/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/home.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/index/today/index.blade.php">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
@@ -715,6 +738,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/login/LoginController.php" />
     <entry file="file://$PROJECT_DIR$/public/html/abc.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -764,6 +788,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../laravel/app/Models/OrderinfoModels.php">
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/link/show.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/advertising/show.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/carousel/show.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/navigation/show.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/news/show.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/user/search.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/user/index.blade.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/NewsController.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/index/layouts/layouts.blade.php">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="21" />
@@ -805,6 +840,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/resources/views/admin/goods/attrsave.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1007">
@@ -820,6 +856,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/goods/GoodsList.blade.php">
+=======
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/ExamController.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/exam/info.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/exam/list.blade.php" />
+    <entry file="file://$PROJECT_DIR$/app/Models/ExamModel.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/HomeController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Models/AreaModel.php">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="105" column="11" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
@@ -828,8 +872,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/goods/attrlist.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="285">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+=======
+        <state relative-caret-position="304">
+          <caret line="16" column="75" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -882,6 +931,20 @@
           <folding>
             <element signature="e#46#82#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/goods/GoodsList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/sort/SortList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="35" selection-end-line="35" selection-end-column="11" />
         </state>
       </provider>
     </entry>
