@@ -84,7 +84,7 @@ class IndexController extends Controller
         $data['goods_imgs']=ImgModel::where('goods_id',$data['goods_id'])->get(['goodss_img'])->toArray();
         $browse=["goods_id"=>$request->input("goods_id"),'user_id'=>$request->input('user_id'),"br_time"=>time()];
         $res=BrowseModel::create($browse);
-        GoodsModel::where('goods_id',$data['goods_id'])->update(['hist'=>$data['hits']+1]);
+        GoodsModel::where('goods_id',$data['goods_id'])->update(['hits'=>$data['hits']+1]);
         $info=AttrjsongoodsModel::where('goods_id',$request->input("goods_id"))->get()->toArray();
         $attr_id=[];
         $attr_val_id=[];
