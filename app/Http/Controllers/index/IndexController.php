@@ -82,8 +82,10 @@ class IndexController extends Controller
     public function goodsinfo(Request $request){
         $data=GoodsModel::where('goods_id',$request->input("goods_id"))->first(['goods_id',"goods_img",'goods_desc','goods_pirce','hits'])->toArray();
         $data['goods_imgs']=ImgModel::where('goods_id',$data['goods_id'])->get(['goodss_img'])->toArray();
-        $browse=["goods_id"=>$request->input("goods_id"),'user_id'=>$request->input('user_id'),"br_time"=>time()];
-        $res=BrowseModel::create($browse);
+        if (!empty($request->input('user_id'))) {
+            $browse = ["goods_id" => $request->input("goods_id"), 'user_id' => $request->input('user_id'), "br_time" => time()];
+            $res = BrowseModel::create($browse);
+        }
         GoodsModel::where('goods_id',$data['goods_id'])->update(['hits'=>$data['hits']+1]);
         $info=AttrjsongoodsModel::where('goods_id',$request->input("goods_id"))->get()->toArray();
         $attr_id=[];
@@ -315,6 +317,13 @@ class IndexController extends Controller
 		$data = CollectModel::join('goods','goods.goods_id','=','collect.goods_id')->where('user_id',$add)->get();
 		echo json_encode($data,1);
 	}
+    //浏览历史
+    public function browse(Request $request)
+    {
+        $add =  $request->input('user_id');
+        $data = BrowseModel::join('goods','goods.goods_id','=','collect.goods_id')->where('user_id',$add)->get();
+        echo json_encode($data,1);
+    }
 	
 	//收货地址默认修改
 	public function address_checked(Request $request){

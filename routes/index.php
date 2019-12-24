@@ -68,3 +68,5 @@ Route::any('/collect/collist','index\IndexController@collist');
 
 //商品搜索
 Route::any('/server/server','index\IndexController@server');
+//浏览历史添加
+Route::any('/browse/browse','index\IndexController@browse');
