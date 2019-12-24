@@ -124,7 +124,7 @@ class IndexController extends Controller
     public function car(Request $request){
         $data=$request->all();
         $data['attr_val_id']=implode(",",$data['attr_val_id']);
-        $num=CatModel::where(['user_id'=>$data['user_id'],'goods_id'=>$data['goods_id']])->count();
+        $num=CatModel::where(['user_id'=>$data['user_id'],'goods_id'=>$data['goods_id'],'attr_val_id'=>$data['attr_val_id']])->count();
         if ($num>0){
             return json_encode(['res'=>201,'msg'=>'商品已存在'],1);
         }
